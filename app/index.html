@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riesgo de la Poblacion en Málaga</title>
+
+    <!-- Cargar la SDK -->
+
+    <link
+      rel="stylesheet"
+      href="https://desktop-dakg3p7/4.31/esri/themes/light/main.css"
+    />
+    <link rel="stylesheet" href="./libraries/bootstrap/css/bootstrap.min.css" />
+    <script src="https://desktop-dakg3p7/4.31/init.js"></script>
+
+    <!-- Cargar CSS y JS -->
+
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Loader de pantalla completa -->
+    <div
+      id="loader"
+      style="
+        position: fixed;
+        inset: 0;
+        background-color: rgba(255, 255, 255, 0.8);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <calcite-loader
+        active
+        label="Cargando..."
+        scale="l"
+        type="indeterminate"
+      ></calcite-loader>
+    </div>
+    <section>
+      <nav class="nav">
+        <img src="./images/logos/logo_ciudad_blanco.png" alt="" />Riesgos
+        Climáticos Málaga<img src="./images/logos/logo_geo-clima.png" alt="" />
+      </nav>
+    </section>
+    <section>
+      <div id="mapViewDiv"></div>
+      <button id="btnIslaCalor" class="btn btn-isla">
+        Generar Mapa Islas de Calor
+      </button>
+      <button id="btnInundacion" class="btn btn-inundacion">
+        Generar Mapa Inundación
+      </button>
+      <div id="resultados" class="resultados"></div>
+      <div class="graficas">
+        <h6>Riesgo Población</h6>
+        <div><img src="./images/temp/grafico.svg" alt="" /></div>
+      </div>
+    </section>
+  </body>
+</html>
